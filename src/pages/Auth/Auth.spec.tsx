@@ -1,5 +1,4 @@
-import React from 'react';
-import { expect } from 'chai';
+import {expect} from 'chai';
 import Auth from './Auth';
 
 describe('Spec Auth', function () {
