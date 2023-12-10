@@ -1,9 +1,9 @@
-import { within, userEvent } from '@storybook/testing-library';
+import {userEvent, within} from '@storybook/testing-library';
 
-import { Page } from './Page';
+import {Page} from './Page.jsx';
 
 export default {
-  title: 'Example/Page',
+  title: 'Pages/Page',
   component: Page,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
