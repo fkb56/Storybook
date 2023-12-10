@@ -1,8 +1,8 @@
-import Formlogin, {FormloginProps} from './FormLogin';
+import {FormLogin, FormLoginProps} from './FormLogin';
 
 export default {
     title: "Pages/FormLogin",
-    component: Formlogin
+    component: FormLogin
 };
 
-export const Default = (props: FormloginProps) => <Formlogin {...props} />;
+export const Default = (props: FormLoginProps) => <FormLogin {...props} />;

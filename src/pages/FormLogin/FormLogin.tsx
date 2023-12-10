@@ -1,14 +1,13 @@
-import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {ButtonGoogle} from "../../components/ButtonGoogle/ButtonGoogle"
-import {Input} from "@dabou56/my-react.components.input"
+import {Input} from "../../components/input/input"
 // import type {FormHTMLAttributes} from "react";
 // TODO
 // @ts-ignore
 import style from "../../style.module.css";
-import {validateEmail} from "../../service/utils";
-import {useLoginContext} from "../../service/context/context";
-import AuthService from "../../service/controller";
+import {validateEmail} from "./service/utils";
+import {useLoginContext} from "./service/context/context";
+import AuthService from "./service/controller";
 
 export type FormLoginProps = {
 	loginCallback?: () => void;
@@ -23,11 +22,6 @@ export const FormLogin = ({loginCallback, apiDetails}: FormLoginProps) => {
 
 	const {loginDispatch, userDispatch} = useLoginContext();
 
-	const [email, setEmail] = useState("");
-	const [username, setUsername] = useState("");
-	const [password, setPassword] = useState("");
-
-	// const handleSubmit = (e: FormHTMLAttributes<HTMLFormElement>): void => {
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 
@@ -38,7 +32,6 @@ export const FormLogin = ({loginCallback, apiDetails}: FormLoginProps) => {
 		}
 
 		await authService.loginUser(loginDispatch, userDispatch, navigate, {loginCallback});
-		// loginCallback(userDispatch);
 		console.log("loginCallback", loginCallback);
 	}
 
