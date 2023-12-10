@@ -37,3 +37,23 @@ export const Small = {
 		label: 'ButtonGoogle',
 	},
 };
+
+
+export const OutlinedButton = () => {
+	return <ButtonGoogle variant="outlined" color="success">outlined</ButtonGoogle>
+}
+
+export const ContainedButton = () => {
+	return <ButtonGoogle variant="contained" color="warning">contained</ButtonGoogle>
+}
+
+export const DangerButton = () => {
+	return <ButtonGoogle variant="outlined" color="danger">danger</ButtonGoogle>
+}
+
+export const GoogleButton =  () => {
+	return <ButtonGoogle variant="google">Sign in with Google</ButtonGoogle>
+}
+export const GoogleButtonDisabled = () => {
+	return <ButtonGoogle variant="google" disabled>Sign in with Google</ButtonGoogle>
+}

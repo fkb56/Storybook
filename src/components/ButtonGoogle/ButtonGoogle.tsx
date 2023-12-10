@@ -1,7 +1,7 @@
 import type {ButtonHTMLAttributes, ReactNode} from 'react';
-import {Google} from "@dabou56/my-react.svg.google"
+import {Google} from "../../SVG/Google/Google";
 import {twMerge} from 'tailwind-merge';
-import style from "style.module.css"
+import style from "./style.module.css"
 
 
 export type ButtonProps = {
